@@ -9,7 +9,7 @@
 #' 
 #' @note For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon. 
 #' 
-#' For detailed instructions in the use of these plots in this package, visit \url{}
+#' For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chrisbeckett8/rfviz/blob/master/Rfviz.md}
 #'  
 #' @author Chris Beckett \email{chrisbeckett8@gmail.com}, based on original Java graphics by Leo 
 #' Breiman and Adele Cutler.
