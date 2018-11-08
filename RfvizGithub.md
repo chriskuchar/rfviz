@@ -122,7 +122,7 @@ Static parallel coordinate plots are not particularly good for discovering relat
 
 Figure 1 shows an example of a parallel coordinate plot for the mtcars data in R. Each line represents one car, and the different attributes for the car are plotted on the axes.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Parallel.png" alt="\label{fig:fig1}Figure 1: Parallel coordinate plot" width="700px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Parallel.png" alt="\label{fig:fig1}Figure 1: Parallel coordinate plot" width="700px" height="700px" />
 <p class="caption">
 Figure 1: Parallel coordinate plot
 </p>
@@ -206,7 +206,7 @@ Note:
 
 -   in this report, the seed is set for reproducibility of the random forest. It is optional.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Three_Plots_Example.png" alt="\label{fig:fig2}Figure 2: Rfviz plots for the iris data" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Three_Plots_Example.png" alt="\label{fig:fig2}Figure 2: Rfviz plots for the iris data" width="900px" height="700px" />
 <p class="caption">
 Figure 2: Rfviz plots for the iris data
 </p>
@@ -241,7 +241,7 @@ rfprep_mtcars <- rf_prep(x=mtcars[,-1], y=mtcars$mpg, seed=2894)
 rf_viz(rfprep_mtcars) 
 ```
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Three_Plots_Regression.png" alt="\label{fig:fig3}Figure 3: Rfviz plots for the mtcars data" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Three_Plots_Regression.png" alt="\label{fig:fig3}Figure 3: Rfviz plots for the mtcars data" width="900px" height="700px" />
 <p class="caption">
 Figure 3: Rfviz plots for the mtcars data
 </p>
@@ -273,12 +273,12 @@ Any point(s) or line(s) that are brushed with the left mouse button in any of th
 
 Selecting a square of points on the Metric Multidimensional Scaling Proximities Plot is illustrated in Figure 4. Selecting multiple lines on the Input Data Plot is illustrated in Figure 5.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Selection.png" alt="\label{fig:fig4}Figure 4: Selecting points on the MDS plot" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Selection.png" alt="\label{fig:fig4}Figure 4: Selecting points on the MDS plot" width="900px" height="700px" />
 <p class="caption">
 Figure 4: Selecting points on the MDS plot
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Selection2.png" alt="\label{fig:fig5}Figure 5: Selecting points on the Input Data Plot" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Selection2.png" alt="\label{fig:fig5}Figure 5: Selecting points on the Input Data Plot" width="900px" height="700px" />
 <p class="caption">
 Figure 5: Selecting points on the Input Data Plot
 </p>
@@ -287,22 +287,22 @@ Figure 5: Selecting points on the Input Data Plot
 
 Any point(s) selected of any of the plots will be omitted from all plots using the "deactivate" button in the "Modify" section of the Loon Inspector. Figure 6shows the result after pressing the "deactivate" button for Figure 5. This can be done in successive fashion (Figure 7and Figure 8) until the desired data is left on the plot. To place all of the data back into the plot, simply select "reactivate" button in the "Modify" section of the Loon Inspector (Figure 9).
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Deactivate1.png" alt="\label{fig:fig6}Figure 6: Remove data using the deactivate button " width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Deactivate1.png" alt="\label{fig:fig6}Figure 6: Remove data using the deactivate button " width="900px" height="700px" />
 <p class="caption">
 Figure 6: Remove data using the deactivate button
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Selection3.png" alt="\label{fig:fig7}Figure 7: Select more data" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Selection3.png" alt="\label{fig:fig7}Figure 7: Select more data" width="900px" height="700px" />
 <p class="caption">
 Figure 7: Select more data
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Deactivate2.png" alt="\label{fig:fig8}Figure 8: Selected data are removed" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Deactivate2.png" alt="\label{fig:fig8}Figure 8: Selected data are removed" width="900px" height="700px" />
 <p class="caption">
 Figure 8: Selected data are removed
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Reactivate.png" alt="\label{fig:fig9}Figure 9: Revert to the original plots" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Reactivate.png" alt="\label{fig:fig9}Figure 9: Revert to the original plots" width="900px" height="700px" />
 <p class="caption">
 Figure 9: Revert to the original plots
 </p>
@@ -315,7 +315,7 @@ Starting with the mouse hovering over the MDS plot, horizontal rotations can be 
 
 Figure 10 shows the MDS plot after horizontal rotation.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Rotation1.png" alt="\label{fig:fig10}Figure 10: MDS plot after horizontal rotation" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Rotation1.png" alt="\label{fig:fig10}Figure 10: MDS plot after horizontal rotation" width="900px" height="700px" />
 <p class="caption">
 Figure 10: MDS plot after horizontal rotation
 </p>
@@ -332,7 +332,7 @@ To pan the plot horizontally:
 
 Figure 11 shows the MDS plot after a horizontal pan.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Rotation2.png" alt="\label{fig:fig11}Figure 11: MDS plot after horizontal pan" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Rotation2.png" alt="\label{fig:fig11}Figure 11: MDS plot after horizontal pan" width="900px" height="700px" />
 <p class="caption">
 Figure 11: MDS plot after horizontal pan
 </p>
@@ -358,7 +358,7 @@ iris[rfiris['selected'], ]
 ```
 
 which would produce the output in Figure 20.
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Outputselected.png" alt="\label{fig:fig20}Figure 20: Selected data from Figure 5" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Outputselected.png" alt="\label{fig:fig20}Figure 20: Selected data from Figure 5" width="900px" height="700px" />
 <p class="caption">
 Figure 20: Selected data from Figure 5
 </p>
@@ -367,12 +367,12 @@ Figure 20: Selected data from Figure 5
 
 To select all the data, in the Select portion of the Loon Inspector, click on "all" (Figure 23). To select none of the data, in the Select portion of the Loon Inspector, click on "none" (Figure 24).
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Select_All.png" alt="\label{fig:fig23}Figure 23: Selecting all the data" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Select_All.png" alt="\label{fig:fig23}Figure 23: Selecting all the data" width="900px" height="700px" />
 <p class="caption">
 Figure 23: Selecting all the data
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Select_None.png" alt="\label{fig:fig24}Figure 24: Selecting none of the data" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Select_None.png" alt="\label{fig:fig24}Figure 24: Selecting none of the data" width="900px" height="700px" />
 <p class="caption">
 Figure 24: Selecting none of the data
 </p>
@@ -381,7 +381,7 @@ Figure 24: Selecting none of the data
 
 In the Select portion of the Inspector, select one of the colors under the Select: "By Color" section. This will select the class corresponding to that color, for each of the plots in view.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Select_By_Color.png" alt="\label{fig:fig25}Figure 25: Selecting classes by color" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Select_By_Color.png" alt="\label{fig:fig25}Figure 25: Selecting classes by color" width="900px" height="700px" />
 <p class="caption">
 Figure 25: Selecting classes by color
 </p>
@@ -390,12 +390,12 @@ Figure 25: Selecting classes by color
 
 When you click on a plot, the default Loon Inspector, which is associated with the MDS plot, will change. For example, if you open the three plots (Figure 26), and click anywhere on the Input Data Plot, the Loon Inspector will change to control the parallel coordinate plots (Figure 27). This change is not usually noticeable because any option selected on the Input Data Plot will automatically change the Local Importance Score Plot as well. It is only with the Classic Multidimensional Scaling Plot that this matters, because it has different options in the Inspector the other Inspector does not have.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Three_Plots_Example2.png" alt="\label{fig:fig26}Figure 26: Rfviz plots with the default Loon Inspector (associated with the MDS plot)" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Three_Plots_Example2.png" alt="\label{fig:fig26}Figure 26: Rfviz plots with the default Loon Inspector (associated with the MDS plot)" width="900px" height="700px" />
 <p class="caption">
 Figure 26: Rfviz plots with the default Loon Inspector (associated with the MDS plot)
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/SelectInputDataPlot.png" alt="\label{fig:fig27}Figure 27: Rfviz plots with the parallel coordinate Loon Inspector (associated with the Input and Variable Importance plots)" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/SelectInputDataPlot.png" alt="\label{fig:fig27}Figure 27: Rfviz plots with the parallel coordinate Loon Inspector (associated with the Input and Variable Importance plots)" width="900px" height="700px" />
 <p class="caption">
 Figure 27: Rfviz plots with the parallel coordinate Loon Inspector (associated with the Input and Variable Importance plots)
 </p>
@@ -404,12 +404,12 @@ Figure 27: Rfviz plots with the parallel coordinate Loon Inspector (associated w
 
 To change to glyphs, select a rectangle of observations on the MDS Plot (Figure 28). Click on a glyph button, for example, the triangle button, (Figure 29). To revert to normal, select the circle again on the glyph section.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Selection.png" alt="\label{fig:fig28}Figure 28: Selected observations" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Selection.png" alt="\label{fig:fig28}Figure 28: Selected observations" width="900px" height="700px" />
 <p class="caption">
 Figure 28: Selected observations
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/ChangetoGlyphs.png" alt="\label{fig:fig29}Figure 29: Changing to triangle glyphs" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/ChangetoGlyphs.png" alt="\label{fig:fig29}Figure 29: Changing to triangle glyphs" width="900px" height="700px" />
 <p class="caption">
 Figure 29: Changing to triangle glyphs
 </p>
@@ -418,12 +418,12 @@ Figure 29: Changing to triangle glyphs
 
 To change the scaling options, select the Input Data Plot or the Local Importance Score Plot so that the corresponding loon inspector appears (Figure 31).
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/SelectInputDataPlot.png" alt="\label{fig:fig31}Figure 31: Selecting the Input Data plot makes the parallel coordinate Loon Inspector Plot appear" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/SelectInputDataPlot.png" alt="\label{fig:fig31}Figure 31: Selecting the Input Data plot makes the parallel coordinate Loon Inspector Plot appear" width="900px" height="700px" />
 <p class="caption">
 Figure 31: Selecting the Input Data plot makes the parallel coordinate Loon Inspector Plot appear
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/SelectInputDataPlot2.png" alt="\label{fig:fig32}Figure 32: Changing the scales of the parallel coordinate plots" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/SelectInputDataPlot2.png" alt="\label{fig:fig32}Figure 32: Changing the scales of the parallel coordinate plots" width="900px" height="700px" />
 <p class="caption">
 Figure 32: Changing the scales of the parallel coordinate plots
 </p>
@@ -477,12 +477,12 @@ rfglass <- rf_viz(rfprep_glass)
 
 The results are given in Figure 12. To select a given class, select the color on the Loon Inspector section labeled "by color". For selecting the right-most color, the results are given in Figure 13.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Three_Plots_Vign2.png" alt="\label{fig:fig12}Figure 12: Rfviz plots for the glass data" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Three_Plots_Vign2.png" alt="\label{fig:fig12}Figure 12: Rfviz plots for the glass data" width="900px" height="700px" />
 <p class="caption">
 Figure 12: Rfviz plots for the glass data
 </p>
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Select_Class_Vign.png" alt="\label{fig:fig13}Figure 13: Selecting Glass Type 7" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Select_Class_Vign.png" alt="\label{fig:fig13}Figure 13: Selecting Glass Type 7" width="900px" height="700px" />
 <p class="caption">
 Figure 13: Selecting Glass Type 7
 </p>
@@ -526,21 +526,21 @@ glass[rfglass['selected'], ]
 
 We see that this color is Glass Type 7. Returning to the graphs, for the Local Importance Score Plot, you can see that the values for Barium are really important for Glass Type 7 (Figure 15). This seems to differentiate it the most from from the other Glass Types.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Local_Imp_Vign.png" alt="\label{fig:fig15}Figure 15: Barium is important for Glass Type 7" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Local_Imp_Vign.png" alt="\label{fig:fig15}Figure 15: Barium is important for Glass Type 7" width="900px" height="700px" />
 <p class="caption">
 Figure 15: Barium is important for Glass Type 7
 </p>
 
 Looking at the parallel coordinate plot of the Input Data (Figure 16) shows that the values for Barium are generally higher for Glass Type 7 than for the other classes.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/Input_Data_Vign.png" alt="\label{fig:fig16}Figure 16: Values for Barium are higher for Glass Type 7" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/Input_Data_Vign.png" alt="\label{fig:fig16}Figure 16: Values for Barium are higher for Glass Type 7" width="900px" height="700px" />
 <p class="caption">
 Figure 16: Values for Barium are higher for Glass Type 7
 </p>
 
 Further, in the plot of the Classical Metric Multidimensional Scaling Proximities (Figure 17), you can see how Glass Type 7 is grouped together in comparison to the other groups.
 
-<img src="/Users/chris/Library/Mobile Documents/com~apple~CloudDocs/Chris USU/Master's Thesis Work/Final_Report 10:27:18/RfPaperPics/CMD_Vign2.png" alt="\label{fig:fig17}Figure 17: MDS plot showing Glass Type 7" width="900px" height="700px" />
+<img src="https://github.com/chrisbeckett8/chrisbeckett8.github.io/blob/master/pictures/CMD_Vign2.png" alt="\label{fig:fig17}Figure 17: MDS plot showing Glass Type 7" width="900px" height="700px" />
 <p class="caption">
 Figure 17: MDS plot showing Glass Type 7
 </p>
