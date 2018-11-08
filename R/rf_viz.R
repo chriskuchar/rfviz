@@ -256,7 +256,7 @@ rf_viz <-
       list(input = idsa)
     } else if(imp){
       list(imp = issa)
-    } else (cmd){
+    } else {
       list(cmd = cmdxyz)
     }
   }
