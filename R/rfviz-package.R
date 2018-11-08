@@ -16,7 +16,7 @@
 #' 
 #' rfviz is built using the package Loon on the backend, and implements the random forests algorithm.
 #'
-#' For detailed instructions in the use of these plots in this package, visit \url{}
+#' For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chrisbeckett8/rfviz/blob/master/Rfviz.md}
 #'
 #' @note For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon.  
 #' 
