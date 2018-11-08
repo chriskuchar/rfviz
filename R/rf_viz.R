@@ -17,7 +17,7 @@
 #'
 #' @note For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon.
 #'
-#' For detailed instructions in the use of these plots in this package, visit \url{}
+#' For detailed instructions in the use of these plots in this package, visit \url{https://chrisbeckett8.github.io/Rfviz.html}
 #'
 #' @author Chris Beckett \email{chrisbeckett8@gmail.com}, based on original Java graphics by Leo
 #' Breiman and Adele Cutler.
@@ -27,7 +27,7 @@
 #' *2*(3), 18-22. \url{https://CRAN.R-project.org/doc/Rnews/}
 #'
 #' Waddell A, Oldford R. Wayne (2018). "loon: Interactive Statistical Data Visualization"
-#' \url{https://cran.r-project.org/web/packages/loon/index.html}
+#' \url{https://github.com/waddella/loon}
 #'
 #' Breiman, L. (2001), Random Forests, Machine Learning 45(1), 5-32.
 #'
@@ -72,7 +72,7 @@ rf_viz <-
     rm(cmdxyz)
     cmdxyz <- NULL
     rm(cmdxyz)
-
+    
     inputOnly <- FALSE
     impOnly <- FALSE
     cmdOnly <- FALSE
@@ -87,11 +87,11 @@ rf_viz <-
         }
       }
     }
-
+    
     tt <- tktoplevel()
     customInspector <- FALSE
     if(inputOnly == TRUE | impOnly == TRUE | cmdOnly == TRUE) customInspector <- TRUE
-
+    
     #All three plots, the input data, local importance scores, and cmd scaled proximities
     if (input == TRUE) {
       #Input Serial Axes Plot
@@ -106,7 +106,7 @@ rf_viz <-
         useLoonInspector = !customInspector
       )
     }
-
+    
     if (imp == TRUE) {
       #Local Importance Score Plots
       #Prepare the Local Importance Scores for the plot
@@ -125,7 +125,7 @@ rf_viz <-
           color = rfprep$y
         )
     }
-
+    
     if (cmd == TRUE) {
       #Metric Multidimensional Scaling Proximities
       #Obtain the CMD scaled proximities in preparation for plot
@@ -142,7 +142,7 @@ rf_viz <-
           ylabel = ""
         )
     }
-
+    
     #Setting up the viewing grid for the plots
     #All plots
     if (input == TRUE & imp == TRUE & cmd == TRUE) {
@@ -191,11 +191,11 @@ rf_viz <-
              column = 0,
              sticky = "nesw")
     }
-
+    
     tkgrid.columnconfigure(tt, 0, weight = 1)
     tkgrid.columnconfigure(tt, 1, weight = 1)
     tkgrid.rowconfigure(tt, 0, weight = 1)
-
+    
     #Input Data Plot
     if (inputOnly == TRUE) {
       tkpack(idsa,
@@ -205,7 +205,7 @@ rf_viz <-
       ## Add a custom inspector (no layers)
       f <- tkframe(tt)
       ai <- l_serialaxes_inspector(parent = f, activewidget = idsa)
-
+      
       tkpack(f, side = "right", anchor = "ne")
       tkpack(ai, side = "top", fill = "x")
     }
@@ -221,7 +221,7 @@ rf_viz <-
       tkpack(f, side = "right", anchor = "ne")
       tkpack(ai, side = "top", fill = "x")
     }
-
+    
     #CMD Scaling Proximities Plot
     if (cmdOnly == TRUE) {
       tkpack(
@@ -245,9 +245,9 @@ rf_viz <-
       tkpack(ai, side = "top", fill = "x")
     }
     if(cmd & input & imp){ 
-    list(input = idsa, imp = issa, cmd = cmdxyz)
+      list(input = idsa, imp = issa, cmd = cmdxyz)
     } else if(input & imp){
-    list(input = idsa, imp = issa)  
+      list(input = idsa, imp = issa)  
     } else if(imp & cmd){
       list(imp = issa, cmd = cmdxyz)  
     } else if(input & cmd){
@@ -256,7 +256,7 @@ rf_viz <-
       list(input = idsa)
     } else if(imp){
       list(imp = issa)
-    } else (cmd){
+    } else {
       list(cmd = cmdxyz)
     }
   }

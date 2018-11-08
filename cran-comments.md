@@ -1,7 +1,7 @@
 First Submission
 ----------------
 
-This is my first submission
+This is a resubmission
 
 Test environments
 -----------------
@@ -12,13 +12,7 @@ Test environments
 R CMD check results
 -------------------
 
-There were no ERRORs or WARNINGs and 2 NOTEs
-
-Status: sub-directories of 1Mb or more: doc 8.1Mb
-
-My package is a graphical user interface to interpret Random Forests. It is vital that I have detailed graphics to explain the use and functionality of it.
-
-Status: R Under development (unstable) (2018-09-20 r75339)
+There were no ERRORs or WARNINGs and NOTEs
 
 Downstream dependencies
 -----------------------

@@ -16,7 +16,7 @@
 #' 
 #' rfviz is built using the package Loon on the backend, and implements the random forests algorithm.
 #'
-#' For detailed instructions in the use of these plots in this package, visit \url{}
+#' For detailed instructions in the use of these plots in this package, visit \url{https://chrisbeckett8.github.io/Rfviz.html}
 #'
 #' @note For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon.  
 #' 
@@ -28,7 +28,7 @@
 #' *2*(3), 18-22. \url{https://CRAN.R-project.org/doc/Rnews/}
 #' 
 #' Waddell A, Oldford R. Wayne (2018). "loon: Interactive Statistical Data Visualization"
-#' \url{https://cran.r-project.org/web/packages/loon/index.html}
+#' \url{https://github.com/waddella/loon}
 #' 
 #' Breiman, L. (2001), Random Forests, Machine Learning 45(1), 5-32.
 #' 

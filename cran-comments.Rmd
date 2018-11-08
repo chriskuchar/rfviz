@@ -1,21 +1,21 @@
 ---
 title: "cran-comments"
 author: Chris Beckett
-date: September 21, 2018
+date: November 8, 2018
 output:
   md_document:
     variant: markdown_github
 ---
 
 ##First Submission
-This is my first submission 
+This is a resubmission 
 
 ## Test environments
 * local OS X install, R 3.5.1
 * win-builder (devel and release)
 
 ## R CMD check results
-There were no ERRORs or WARNINGs and 0 NOTEs
+There were no ERRORs or WARNINGs and NOTEs
 
 ## Downstream dependencies
 There are currently no downstream dependencies for this package.
