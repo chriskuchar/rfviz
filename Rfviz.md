@@ -97,7 +97,7 @@ The mtcars data set is a built-in data set within R. It includes fuel consumptio
 
 Glass:
 
-The glass data set is from the UCI Machine Learning Respotory. The response variable is the type of glass and is the tenth column of the data. The descriptor variables are the first 9 columns and are characteristics of each glass. It is built-in to this package. Simple use *data(glass)* to load it after installing the rfviz package. (Dheeru and Karra Taniskidou (2017))
+The glass data set is from the UCI Machine Learning Respotory. The response variable is the type of glass and is the tenth column of the data. The descriptor variables are the first 9 columns and are characteristics of each glass. It is built-in to this package. Simply use *data(glass)* to load it after installing the rfviz package. (Dheeru and Karra Taniskidou (2017))
 
 Variable Importance
 -------------------
