@@ -74,6 +74,8 @@ Installation
 
 This package is currently available on Github. Use install\_github("chrisbeckett8/rfviz") to download and use it. I am submitting it to CRAN this week. Once it is on CRAN this will be updated.
 
+For the source code on Github, visit https://github.com/chrisbeckett8/rfviz.
+
 Background
 ==========
 
