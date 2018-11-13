@@ -72,7 +72,7 @@ Rfviz was authored and created by Chris Beckett. The graphical user interface to
 Installation
 ------------
 
-This package is currently available on Github. Use install\_github("chrisbeckett8/rfviz") to download and use it. I am submitting it to CRAN this week. Once it is on CRAN this will be updated.
+This package is currently available on Github. Use devtools::install\_github("chrisbeckett8/rfviz") and library(rfviz) to download and use it in R. If you do not already have devtools installed, use install.packages("devtools"), and library("devtools") before installing rfviz. I am submitting it to CRAN this week. Once it is on CRAN this will be updated.
 
 For the source code on Github, visit https://github.com/chrisbeckett8/rfviz.
 
