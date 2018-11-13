@@ -76,6 +76,8 @@ This package is currently available on Github. Use devtools::install\_github("ch
 
 For the source code on Github, visit https://github.com/chrisbeckett8/rfviz.
 
+For the website version of this markdown file, visit https://chrisbeckett8.github.io/Rfviz.
+
 Background
 ==========
 
