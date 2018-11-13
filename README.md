@@ -8,4 +8,4 @@ Random forests are very popular tools for predictive analysis and data science. 
 
 Please read "Rfviz.md" for complete documentation, or go to https://chrisbeckett8.github.io/Rfviz for the website version of the markdown. 
 
-For installation, use "install_github("chrisbeckett8/rfviz")
+For installation, use devtools::install_github("chrisbeckett8/rfviz") and library(rfviz). If you do not have devtools already installed within R, use install.packages("devtools") and library(devtools) before installing rfviz. 
