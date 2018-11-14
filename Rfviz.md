@@ -578,3 +578,13 @@ Henderson, and Velleman. 1981. “Building Multiple Regression Models Interactiv
 Martin, DP. 2014. “Partial Dependence Plots.” *Wicked Good Data*. <http://dpmartin42.github.io/posts/r/partial-dependence>.
 
 Quach, A. 2012. “Interactive Random Forests Plots.” *MS Thesis, Utah State University*.
+
+Citation Recommendation
+=======================
+
+@manual{cb3,
+	author = {C Beckett},
+	title = {Rfviz: An Interactive Visualization Packge for Random Forests in R},
+	year = {2018},
+	url = {https://chrisbeckett8.github.io/Rfviz},
+}
