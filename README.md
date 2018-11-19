@@ -10,6 +10,8 @@ Please read "Rfviz.md" for complete documentation, or go to https://chrisbeckett
 
 For installation, this package is available on CRAN. Use install.packages("rfviz") within R to download it.
 
+UPDATE: While it is available to download in R, it won't work yet. This is because a dependency package called tcl/tk is built-in to R now. There is a dependency for rfviz called loon. Loon requires tcl/tk to be downloaded as a package, which can't happen because it is built-in to R now. This is an error within loon. It shouldn't be listed as a required dependency. I have reached out to the author and hopefully they fix it soon.
+
 Citation Recommendation:
 
 @manual{cb3,
