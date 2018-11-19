@@ -74,6 +74,8 @@ Installation
 
 This package is currently available on CRAN. Use install.packages("rfviz") within R to download it. 
 
+UPDATE: While it is available to download in R, it won't work yet. This is because a dependency package called tcl/tk is built-in to R now. There is a dependency for rfviz called loon. Loon requires tcl/tk to be downloaded as a package, which can't happen because it is built-in to R now. This is an error within loon. It shouldn't be listed as a required dependency. I have reached out to the author and hopefully they fix it soon.
+
 If you wish to download it from github, use devtools::install\_github("chrisbeckett8/rfviz") and library(rfviz) to download and use it in R. If you do not already have devtools installed, use install.packages("devtools"), and library("devtools") before installing rfviz. 
 
 For the source code on Github, visit https://github.com/chrisbeckett8/rfviz.
