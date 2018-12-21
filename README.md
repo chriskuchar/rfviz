@@ -8,9 +8,9 @@ Random forests are very popular tools for predictive analysis and data science. 
 
 Please read "Rfviz.md" for complete documentation, or go to https://chrisbeckett8.github.io/Rfviz for the website version of the markdown. 
 
-For installation, this package is available on CRAN. Use install.packages("rfviz") within R to download it.
+This package is available on CRAN. Use install.packages("rfviz") within R to download it.
 
-UPDATE: While it is available to download in R, it won't work yet. This is because a dependency package called tcl/tk is built-in to R now. There is a dependency for rfviz called loon. Loon requires tcl/tk to be downloaded as a package, which can't happen because it is built-in to R now. This is an error within loon. It shouldn't be listed as a required dependency. I have reached out to the author and hopefully they fix it soon.
+If installation fails, make sure you have the most recent version of R, make sure your computer has the most recent update and install xtools if you are using a Mac, using this guide: "http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/".
 
 Citation Recommendation:
 
