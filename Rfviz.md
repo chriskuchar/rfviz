@@ -498,7 +498,7 @@ Figure 13: Selecting Glass Type 7
 To see which class was selected, while the plots are still up, return to the R console, and use this line of code:
 
 ``` r
-glass[rfglass['selected'], ]
+glass[rfglass$input['selected'], ]
 ```
 
     ##          RI    Na   Mg   Al    Si    K   Ca   Ba   Fe Type
