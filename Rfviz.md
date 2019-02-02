@@ -362,7 +362,7 @@ rfiris <- rf_viz(rfprep_iris)
 To view the selected data from Figure 5, if the rfviz object was stored as rfiris, we would do:
 
 ``` r
-iris[rfiris['selected'], ]
+iris[rfiris$input['selected'], ]
 ```
 
 which would produce the output in Figure 20.
