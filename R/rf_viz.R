@@ -3,7 +3,7 @@
 #' @description The Input Data, Local Importance Scores, and Classic Multidimensional Scaling Plots
 #'
 #' @importFrom stats cmdscale
-#' @importFrom utils data
+#' @importFrom utils data 
 #' @import tcltk
 #' @import randomForest
 #' @import loon
@@ -11,15 +11,15 @@
 #' @param rfprep A list of prepared Random Forests input data to be used in visualization, created using the function rf_prep.
 #' @param input Should the Input Data Parallel Coordinate Plot be included in the visualization?
 #' @param imp Should the Local Importance Scores Parallel Coordinate Plot be included in the visualization?
-#' @param cmd Should the Classic Multidimensional Scaling Proximites 2-D XYZ Scatter Plot be included in the visualization?
+#' @param cmd Should the Classic Multidimensional Scaling Proximites 3-D XYZ Scatter Plot be included in the visualization?
 #' @param hl_color The highlight color when you select points on the plot(s).
-#' @return Any combination of the parallel coordinate plots of the input data, the local importance scores, and the 2-D XYZ classic multidimensional scaling proximities from the output of the random forest algorithm.
+#' @return Any combination of the parallel coordinate plots of the input data, the local importance scores, and the 3-D XYZ classic multidimensional scaling proximities from the output of the random forest algorithm.
 #'
 #' @note For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon.
 #'
-#' For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chrisbeckett8/rfviz/blob/master/Rfviz.md}
+#' For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chriskuchar/rfviz/blob/master/Rfviz.md}
 #'
-#' @author Chris Beckett \email{chrisbeckett8@gmail.com}, based on original Java graphics by Leo
+#' @author Chris Kuchar \email{chrisjkuchar@gmail.com}, based on original Java graphics by Leo
 #' Breiman and Adele Cutler.
 #'
 #' @references
@@ -37,15 +37,26 @@
 #' Breiman, L., Cutler, A., Random Forests Graphics.
 #' \url{https://www.stat.berkeley.edu/~breiman/RandomForests/cc_graphics.htm}
 #'
-#' @seealso \code{\link[randomForest]{randomForest}}, \code{\link{rf_prep}}, \code{\link[loon]{l_plot}}, \code{\link[loon]{l_serialaxes}}
+#' @seealso \code{\link[randomForest]{randomForest}}, \code{\link{rf_prep}}, \code{\link[loon]{l_plot3D}}, \code{\link[loon]{l_serialaxes}}
 #'
 #' @examples
-#' #Classification with Iris data set
+#' #Classification with iris data set
 #' rfprep <- rf_prep(x = iris[,1:4], y = iris$Species)
 #'
 #' #View all three plots
 #' Myrfplots <- rf_viz(rfprep, input = TRUE, imp = TRUE, cmd = TRUE, hl_color = 'orange')
 #'
+#' #Select data on any of the plots then run:
+#' iris[Myrfplots$input['selected'], ]
+#' iris[Myrfplots$imp['selected'], ]
+#' iris[Myrfplots$cmd['selected'], ]
+#' 
+#' #Rotate 3-D XYZ Scatterplot
+#' #1. Click on 3-D XYZ Scatterplot
+#' #2. Press 'r' on keyboard to enter rotation mode
+#' #3. Click and drag mouse to rotate plot
+#' #4. Press 'r' to leave rotation mode
+#' 
 #' #View only the Input Data and CMD Scaling Proximities Plots
 #' Myrfplots <- rf_viz(rfprep, input = TRUE, imp = FALSE, cmd = TRUE, hl_color = 'orange')
 #'
@@ -55,6 +66,12 @@
 #' #View all three plots
 #' Myrfplots <- rf_viz(rfprep2, input = TRUE, imp = TRUE, cmd = TRUE, hl_color = 'orange')
 #'
+#' #Unsupervised clustering with iris data set 
+#' rfprep <- rf_prep(x = iris[,1:4], y = NULL)
+#'
+#' #View the Input Data and CMD Scaling Proximities Plots for the unsupervised case. 
+#' #(Importance Scores Plot not valid here)
+#' Myrfplots <- rf_viz(rfprep, input = TRUE, imp = FALSE, cmd = TRUE, hl_color = 'orange')
 #' @export
 rf_viz <-
   function(rfprep,
@@ -64,6 +81,14 @@ rf_viz <-
            hl_color = "orange") {
     tcl('set', '::loon::Options(select-color)', hl_color)
     #This is to pass the CRAN checks
+    if(is.null(rfprep$y)){
+      col <- NULL
+    } else {
+      col <- rfprep$y
+    }
+    if(is.null(rfprep$y)){
+      imp <- FALSE
+    }
     issa <- NULL
     rm(issa)
     idsa <- NULL
@@ -102,11 +127,10 @@ rf_viz <-
         axesLayout = "parallel",
         scaling = "variable",
         title = "Input Data",
-        color = rfprep$y,
+        color = col,
         useLoonInspector = !customInspector
       )
     }
-    
     if (imp == TRUE) {
       #Local Importance Score Plots
       #Prepare the Local Importance Scores for the plot
@@ -122,7 +146,7 @@ rf_viz <-
           scaling = "variable",
           title = "Local Importance Scores",
           useLoonInspector = !customInspector,
-          color = rfprep$y
+          color = col
         )
     }
     
@@ -131,15 +155,16 @@ rf_viz <-
       #Obtain the CMD scaled proximities in preparation for plot
       rf.mds <- cmdscale(1 - rfprep$rf$proximity, eig = TRUE, k = 3)
       cmdxyz <-
-        l_plot(
-          parent = tt,
-          rf.mds$points,
-          linkingGroup = nrow(rfprep$x),
-          title = "Metric Multidimensional Scaling Proximities",
-          useLoonInspector = !customInspector,
-          color = rfprep$y,
-          xlabel = "",
-          ylabel = ""
+        l_plot3D(rf.mds$points,
+                 parent = tt,
+                 linkingGroup = nrow(rfprep$x),
+                 title = "Metric Multidimensional Scaling Proximities",
+                 useLoonInspector = !customInspector,
+                 color = col,
+                 xlabel = "x",
+                 ylabel = "y",
+                 zlabel = "z",
+                 showLabels=TRUE
         )
     }
     
@@ -260,3 +285,4 @@ rf_viz <-
       list(cmd = cmdxyz)
     }
   }
+

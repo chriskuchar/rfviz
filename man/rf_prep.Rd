@@ -4,7 +4,7 @@
 \alias{rf_prep}
 \title{A function to create Random Forests output in preparation for visualization with rf_viz}
 \usage{
-rf_prep(x, y, ...)
+rf_prep(x, y = NULL, ...)
 }
 \arguments{
 \item{x}{A data frame or a matrix of predictors.}
@@ -14,22 +14,25 @@ rf_prep(x, y, ...)
 \item{...}{Optional parameters to be passed down to the randomForest function. Use ?randomForest to see the optional parameters.}
 }
 \value{
-The parallel coordinate plots of the input data, the local importance scores, and the 2-D XYZ classic multidimensional scaling proximities from the output of the random forest algorithm.
+The parallel coordinate plots of the input data, the local importance scores, and the 3-D XYZ classic multidimensional scaling proximities from the output of the random forest algorithm.
 }
 \description{
-A funciton using Random Forests which outputs a list of the Random Forests output, the predictor variables data, and response variable data.
+A function using Random Forests which outputs a list of the Random Forests output, the predictor variables data, and response variable data.
 }
 \note{
 For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon. 
 
-For detailed instructions in the use of these plots in this package, visit \url{https://chrisbeckett8.github.io/Rfviz.html}
+For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chriskuchar/rfviz/blob/master/Rfviz.md}
 }
 \examples{
 #Preparation for classification with Iris data set
 rfprep <- rf_prep(x=iris[,1:4], y=iris$Species)
 
-#Preparation for Regression with mtcars data set
+#Preparation for regression with mtcars data set
 rfprep <- rf_prep(x=mtcars[,-1], y=mtcars$mpg)
+
+#Preparation for the unsupervised case with Iris data set
+rfprep <- rf_prep(x=iris[,1:4], y=NULL)
 }
 \references{
 Liaw A, Wiener M (2002). “Classification and Regression by randomForest.” _R News_,
@@ -47,9 +50,9 @@ Breiman, L., Cutler, A., Random Forests Graphics.
 \url{https://www.stat.berkeley.edu/~breiman/RandomForests/cc_graphics.htm}
 }
 \seealso{
-\code{\link[randomForest]{randomForest}}, \code{\link{rf_viz}}, \code{\link[loon]{l_plot}}, \code{\link[loon]{l_serialaxes}}
+\code{\link[randomForest]{randomForest}}, \code{\link{rf_viz}}, \code{\link[loon]{l_plot3D}}, \code{\link[loon]{l_serialaxes}}
 }
 \author{
-Chris Beckett \email{chrisbeckett8@gmail.com}, based on original Java graphics by Leo 
+Chris Kuchar \email{chrisjkuchar@gmail.com}, based on original Java graphics by Leo 
 Breiman and Adele Cutler.
 }

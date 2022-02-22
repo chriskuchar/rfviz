@@ -1,17 +1,17 @@
 #' @title A function to create Random Forests output in preparation for visualization with rf_viz
 #' 
-#' @description A funciton using Random Forests which outputs a list of the Random Forests output, the predictor variables data, and response variable data. 
+#' @description A function using Random Forests which outputs a list of the Random Forests output, the predictor variables data, and response variable data. 
 #' 
 #' @param x A data frame or a matrix of predictors.
 #' @param y A response vector. If a factor, classification is assume, otherwise regression is assumed. If omitted, randomForest will run in unsupervised mode.
 #' @param ... Optional parameters to be passed down to the randomForest function. Use ?randomForest to see the optional parameters.
-#' @return The parallel coordinate plots of the input data, the local importance scores, and the 2-D XYZ classic multidimensional scaling proximities from the output of the random forest algorithm.
+#' @return The parallel coordinate plots of the input data, the local importance scores, and the 3-D XYZ classic multidimensional scaling proximities from the output of the random forest algorithm.
 #' 
 #' @note For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon. 
 #' 
-#' For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chrisbeckett8/rfviz/blob/master/Rfviz.md}
+#' For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chriskuchar/rfviz/blob/master/Rfviz.md}
 #'  
-#' @author Chris Beckett \email{chrisbeckett8@gmail.com}, based on original Java graphics by Leo 
+#' @author Chris Kuchar \email{chrisjkuchar@gmail.com}, based on original Java graphics by Leo 
 #' Breiman and Adele Cutler.
 #' 
 #' @references 
@@ -29,21 +29,34 @@
 #' Breiman, L., Cutler, A., Random Forests Graphics.
 #' \url{https://www.stat.berkeley.edu/~breiman/RandomForests/cc_graphics.htm}
 #' 
-#' @seealso \code{\link[randomForest]{randomForest}}, \code{\link{rf_viz}}, \code{\link[loon]{l_plot}}, \code{\link[loon]{l_serialaxes}}
+#' @seealso \code{\link[randomForest]{randomForest}}, \code{\link{rf_viz}}, \code{\link[loon]{l_plot3D}}, \code{\link[loon]{l_serialaxes}}
 #' 
 #' @examples
 #' #Preparation for classification with Iris data set
 #' rfprep <- rf_prep(x=iris[,1:4], y=iris$Species)
 #' 
-#' #Preparation for Regression with mtcars data set
+#' #Preparation for regression with mtcars data set
 #' rfprep <- rf_prep(x=mtcars[,-1], y=mtcars$mpg)
+#' 
+#' #Preparation for the unsupervised case with Iris data set
+#' rfprep <- rf_prep(x=iris[,1:4], y=NULL)
 #' @export
-rf_prep <- function(x, y,...){
-rf <-
-  randomForest(x,
-               y,
-               localImp = TRUE,
-               proximity = TRUE,
-               ...)
-return(list(rf = rf, x = x, y = y))
+rf_prep <- function(x, y=NULL,...){
+  if(is.null(y)){
+    rf <-
+      randomForest(x,
+                   y=NULL,
+                   proximity = TRUE,
+                   ...)
+    return(list(rf = rf, x = x, y = NULL))
+  } else {
+    rf <-
+      randomForest(x,
+                   y,
+                   localImp = TRUE,
+                   proximity = TRUE,
+                   ...)
+    return(list(rf = rf, x = x, y = y))
+  }
 }
+

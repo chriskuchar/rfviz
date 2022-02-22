@@ -4,7 +4,8 @@
 \name{glass}
 \alias{glass}
 \title{Glass Identification Data Set}
-\format{A data frame with 214 rows and 10 variables:
+\format{
+A data frame with 214 rows and 10 variables:
 \describe{
   \item{RI}{Refractive Index}
   \item{Na}{Sodium (unit measurement: weight percent in corresponding oxide, as are attributes 4-10)}
@@ -17,7 +18,8 @@
   \item{Fe}{Iron}
   \item{Type}{Class Attribute}
   
-}}
+}
+}
 \source{
 \url{https://archive.ics.uci.edu/ml/datasets/glass+identification}
 }

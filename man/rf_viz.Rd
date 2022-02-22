@@ -4,8 +4,7 @@
 \alias{rf_viz}
 \title{Random Forest Plots for interpreting Random Forests output}
 \usage{
-rf_viz(rfprep, input = TRUE, imp = TRUE, cmd = TRUE,
-  hl_color = "orange")
+rf_viz(rfprep, input = TRUE, imp = TRUE, cmd = TRUE, hl_color = "orange")
 }
 \arguments{
 \item{rfprep}{A list of prepared Random Forests input data to be used in visualization, created using the function rf_prep.}
@@ -14,12 +13,12 @@ rf_viz(rfprep, input = TRUE, imp = TRUE, cmd = TRUE,
 
 \item{imp}{Should the Local Importance Scores Parallel Coordinate Plot be included in the visualization?}
 
-\item{cmd}{Should the Classic Multidimensional Scaling Proximites 2-D XYZ Scatter Plot be included in the visualization?}
+\item{cmd}{Should the Classic Multidimensional Scaling Proximites 3-D XYZ Scatter Plot be included in the visualization?}
 
 \item{hl_color}{The highlight color when you select points on the plot(s).}
 }
 \value{
-Any combination of the parallel coordinate plots of the input data, the local importance scores, and the 2-D XYZ classic multidimensional scaling proximities from the output of the random forest algorithm.
+Any combination of the parallel coordinate plots of the input data, the local importance scores, and the 3-D XYZ classic multidimensional scaling proximities from the output of the random forest algorithm.
 }
 \description{
 The Input Data, Local Importance Scores, and Classic Multidimensional Scaling Plots
@@ -27,14 +26,25 @@ The Input Data, Local Importance Scores, and Classic Multidimensional Scaling Pl
 \note{
 For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon.
 
-For detailed instructions in the use of these plots in this package, visit \url{https://chrisbeckett8.github.io/Rfviz.html}
+For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chriskuchar/rfviz/blob/master/Rfviz.md}
 }
 \examples{
-#Classification with Iris data set
+#Classification with iris data set
 rfprep <- rf_prep(x = iris[,1:4], y = iris$Species)
 
 #View all three plots
 Myrfplots <- rf_viz(rfprep, input = TRUE, imp = TRUE, cmd = TRUE, hl_color = 'orange')
+
+#Select data on any of the plots then run:
+iris[Myrfplots$input['selected'], ]
+iris[Myrfplots$imp['selected'], ]
+iris[Myrfplots$cmd['selected'], ]
+
+#Rotate 3-D XYZ Scatterplot
+#1. Click on 3-D XYZ Scatterplot
+#2. Press 'r' on keyboard to enter rotation mode
+#3. Click and drag mouse to rotate plot
+#4. Press 'r' to leave rotation mode
 
 #View only the Input Data and CMD Scaling Proximities Plots
 Myrfplots <- rf_viz(rfprep, input = TRUE, imp = FALSE, cmd = TRUE, hl_color = 'orange')
@@ -45,6 +55,12 @@ rfprep2 <- rf_prep(x = mtcars[,-1], y = mtcars$mpg)
 #View all three plots
 Myrfplots <- rf_viz(rfprep2, input = TRUE, imp = TRUE, cmd = TRUE, hl_color = 'orange')
 
+#Unsupervised clustering with iris data set 
+rfprep <- rf_prep(x = iris[,1:4], y = NULL)
+
+#View the Input Data and CMD Scaling Proximities Plots for the unsupervised case. 
+#(Importance Scores Plot not valid here)
+Myrfplots <- rf_viz(rfprep, input = TRUE, imp = FALSE, cmd = TRUE, hl_color = 'orange')
 }
 \references{
 Liaw A, Wiener M (2002). “Classification and Regression by randomForest.” _R News_,
@@ -62,9 +78,9 @@ Breiman, L., Cutler, A., Random Forests Graphics.
 \url{https://www.stat.berkeley.edu/~breiman/RandomForests/cc_graphics.htm}
 }
 \seealso{
-\code{\link[randomForest]{randomForest}}, \code{\link{rf_prep}}, \code{\link[loon]{l_plot}}, \code{\link[loon]{l_serialaxes}}
+\code{\link[randomForest]{randomForest}}, \code{\link{rf_prep}}, \code{\link[loon]{l_plot3D}}, \code{\link[loon]{l_serialaxes}}
 }
 \author{
-Chris Beckett \email{chrisbeckett8@gmail.com}, based on original Java graphics by Leo
+Chris Kuchar \email{chrisjkuchar@gmail.com}, based on original Java graphics by Leo
 Breiman and Adele Cutler.
 }

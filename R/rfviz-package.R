@@ -8,19 +8,19 @@
 #' 
 #' The three plots are:
 #' 
-#' 1. The classic multidimensionally scaled proximities are plotted as a 2-D XYZ scatterplot. 
+#' 1. The classic multidimensionally scaled proximities are plotted as a 3-D XYZ scatterplot. 
 #' 
 #' 2. The raw input data is plotted in a parallel coordinate plot. 
 #' 
-#' 3. The local importance scores of each observation are plotted in a parallet coordinate plot. 
+#' 3. The local importance scores of each observation are plotted in a parallel coordinate plot. 
 #' 
 #' rfviz is built using the package Loon on the backend, and implements the random forests algorithm.
 #'
-#' For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chrisbeckett8/rfviz/blob/master/Rfviz.md}
+#' For detailed instructions in the use of these plots in this package, visit \url{https://github.com/chriskuchar/rfviz/blob/master/Rfviz.md}
 #'
 #' @note For instructions on how to use randomForests, use ?randomForest. For more information on loon, use ?loon.  
 #' 
-#' @author Chris Beckett \email{chrisbeckett8@gmail.com}, based on original Java graphics by Leo 
+#' @author Chris Kuchar \email{chrisjkuchar@gmail.com}, based on original Java graphics by Leo 
 #' Breiman and Adele Cutler.
 #' 
 #' @references 
@@ -38,7 +38,7 @@
 #' Breiman, L., Cutler, A., Random Forests Graphics.
 #' \url{https://www.stat.berkeley.edu/~breiman/RandomForests/cc_graphics.htm}
 #' 
-#' @seealso \code{\link[randomForest]{randomForest}}, \code{\link{rf_prep}}, \code{\link{rf_viz}}, \code{\link[loon]{l_plot}}, \code{\link[loon]{l_serialaxes}}
+#' @seealso \code{\link[randomForest]{randomForest}}, \code{\link{rf_prep}}, \code{\link{rf_viz}}, \code{\link[loon]{l_plot3D}}, \code{\link[loon]{l_serialaxes}}
 #' 
 #' @docType package
 #' 
